@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Redirecting...</title>
-	<meta http-equiv="refresh" content="0; URL=https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt">
-	<link rel="canonical" href="https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>repo file link</title>
+<!--
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt">
+    <link rel="canonical" href="https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt">
+-->
+<style>
+    #copy-input-button,
+    #copy-input-text {
+        font-weight: bolder;
+        font-size: 1em;
+        padding: 1em 5em;
+        text-align: left;
+        text-transform: capitalize;
+    }
+    #copy-input-text {
+        text-align: left;
+        text-transform: lowercase;
+        font-weight: normal;
+        font-size: initial;
+        padding: 1em 0.5em;
+        width: 50%;
+    }
+</style>
 </head>
 <body>
     <div>
-        <p>GitHub direct link to raw file from a private repo URL scheme:</p>
-        <p>https://PersonalAccessTokens@raw.githubusercontent.com/GITHUB_ACCOUNT/REPOSITORY_NAME/BRANCH_NAME/FILE_NAME.EXTENTION_NAME</p>
-        <p>my file:</p>
-        <p>https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt</p>
+<!--         <p>GitHub direct link to raw file from a private repo URL scheme:</p>
+        <p>https://PersonalAccessTokens@raw.githubusercontent.com/GITHUB_ACCOUNT/REPOSITORY_NAME/BRANCH_NAME/FILE_NAME.EXTENTION_NAME</p> -->
+        <p>&nbsp;</p>
+        <h1>REPO FILE:</h1>
+        <button type="button" id="copy-input-button" onclick="javascript:copyIt('copy-input-text');">copy the address</button>&nbsp;&nbsp;<input type="text" id="copy-input-text" value="https://github.com/43trh/linkcode4link/raw/main/main_subscription_base64_mix/mix.txt">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
     </div>
+<script type="text/javascript">
+function copyIt(els) {
+  document.querySelectorAll("button#copy-input-button")[0].style.color = "black";
+  document.querySelectorAll("button#copy-input-button")[0].textContent = "copy the address"
+  let copyText = document.getElementById(els);
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);// For mobile devices
+  navigator.clipboard.writeText(copyText.value);
+  document.querySelectorAll("button#copy-input-button")[0].style.color = "green";
+  document.querySelectorAll("button#copy-input-button")[0].textContent = "DONE!"
+}
+</script>
 </body>
 </html>
